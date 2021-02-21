@@ -4,7 +4,7 @@ My goal in the development of this application was to gain a basic understanding
 
 After starting the server, one may freely connect any number of clients so long as the config file is setup to allow the desired number of connections. Upon starting the client software, one is prompted to input a username by which they will be address, and from thereforward, can send messages to the server to be distributed among other connected clients.
 
-[Software Demo Video](http://youtube.link.goes.here)
+[Software Demo Video](https://youtu.be/SuPicmOpx7M)
 
 # Network Communication
 
