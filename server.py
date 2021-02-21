@@ -20,6 +20,7 @@ def listen_for_message(conn, client_list):
             message = conn.recv(1024).decode()
         except:
             client_list.remove(conn)
+            print(str(conn) + " disconnected.")
         
         send_message_to_all(message, client_list)
 
@@ -30,14 +31,20 @@ def send_message_to_all(message, client_list):
     print(message)
 
 def main():
-
+    print("Initializing server...")
     server = initialize_server()    # Initialize the server.
+    print("Server initialization complete.")
+    
     client_list = []                # Initializing an empty list of client connections.
 
+    print("Listening for connections...")
+
     while True:
-        # Listen for new connections to add to client list.
+        # Listen for new connections.
         conn, addr = server.accept()
         print("Recieved connection.")
+
+        # Add connections to the list of connected clients.
         username = conn.recv(1024).decode()
         client_list.append(conn)
 
